@@ -13,7 +13,7 @@ const saltRounds = 10;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(session({
-  secret: "TOPSECRETWORD",
+  secret: "",
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -24,10 +24,10 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 const db = new pg.Client({
-  user: "postgres",
-  host: "localhost",
-  database: "secrets",
-  password: "123456",
+  user: "",
+  host: "",
+  database: "",
+  password: "",
   port: 5432,
 });
 db.connect();
