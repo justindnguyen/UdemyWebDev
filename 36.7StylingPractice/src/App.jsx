@@ -10,7 +10,7 @@ function App() {
 
   let message = "";
   const customStyle = {
-    color: "white"
+    color: ""
   };
   if (CURRENT_TIME < 12) {
     message = "Good Morning";
@@ -26,7 +26,9 @@ function App() {
   return (
     <>
       <div>
-        <h1 className='heading' style={customStyle}>{message}</h1>
+        <h1 className="heading" style={customStyle}>
+          {message}
+        </h1>
       </div>
     </>
   );
