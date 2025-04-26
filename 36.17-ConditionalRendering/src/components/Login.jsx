@@ -1,6 +1,6 @@
 import Input from './Input.jsx';
 
-function Login() {
+function Login(props) {
     return (
         <form className="form">
             <Input 
@@ -11,7 +11,16 @@ function Login() {
                 type="text"
                 placeholder="Password"
             />
-            <button type="submit">Login</button>
+            {props.isRegistered ? null : <Input 
+                type="text"
+                placeholder="Confirm Password"
+            />}
+
+            {!props.isRegistered && (
+                <input type="password" placeholder="Confirm Password" />
+            )}
+            {/* {props.registered ? <button type="submit">Login</button> : <button type="submit">Register</button>} */}
+            <button type="submit">{props.isRegistered ? "Login" : "Register"}</button>
         </form>
     );
 };

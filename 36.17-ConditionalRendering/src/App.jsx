@@ -4,9 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Login from './components/Login'
 
-var isLoggedIn = false;
+var userIsRegistered = true;
 
-const currentTime = new Date().getHours();
+//const currentTime = new Date().getHours();
 
 
 function App() {
@@ -14,7 +14,8 @@ function App() {
   return (
     <>
       <div className="container">
-        {isLoggedIn ? <h1>Hello</h1> : <Login />}
+        <Login isRegistered={userIsRegistered}/>
+        {/* {userIsRegistered ? <Login registered={userIsRegistered}/> : <Login registered={userIsRegistered}/>} */}
         {/* {currentTime < 12 ? <h1>Good Morning</h1> : <h1>Good Evening</h1>} */}
       </div>
     </>
