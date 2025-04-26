@@ -1,4 +1,4 @@
-export const Header = () => {
+function Header() {
   return (
     <header>
         <h1>Keeper</h1>
@@ -6,4 +6,4 @@ export const Header = () => {
   );
 };
 
-//export default Header;
+export default Header;
